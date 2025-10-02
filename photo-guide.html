@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Photo Placeholder Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 600px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        .instructions {
+            text-align: left;
+            background: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        .instructions h3 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        .instructions ol {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+        .instructions li {
+            margin: 0.5rem 0;
+        }
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            text-align: left;
+        }
+        .profile-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3498db, #e74c3c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            margin: 2rem auto;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📸 Profile Photo Setup</h1>
+        <p>This is a guide to help you add your professional photo to your portfolio website.</p>
+        
+        <div class="profile-placeholder">PS</div>
+        
+        <div class="instructions">
+            <h3>Steps to Add Your Photo:</h3>
+            <ol>
+                <li><strong>Take or choose a professional photo</strong>
+                    <ul>
+                        <li>Clear, well-lit headshot</li>
+                        <li>Professional attire</li>
+                        <li>Neutral or clean background</li>
+                        <li>Square aspect ratio (1:1)</li>
+                    </ul>
+                </li>
+                <li><strong>Optimize your photo</strong>
+                    <ul>
+                        <li>Resize to 300x300 or 500x500 pixels</li>
+                        <li>Save as JPG or PNG</li>
+                        <li>Keep file size under 500KB</li>
+                        <li>Name it: <code>profile-photo.jpg</code></li>
+                    </ul>
+                </li>
+                <li><strong>Add to your website</strong>
+                    <ul>
+                        <li>Place the file in the root directory</li>
+                        <li>Or create an <code>images/</code> folder</li>
+                    </ul>
+                </li>
+                <li><strong>Update HTML files</strong>
+                    <ul>
+                        <li>Open: index.html, about.html</li>
+                        <li>Find: <code>&lt;div class="profile-photo"&gt;</code></li>
+                        <li>Replace with: <code>&lt;img src="profile-photo.jpg" alt="Parmeet Singh Bhogal" class="profile-photo"&gt;</code></li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="note">
+            <strong>💡 Tip:</strong> You can use free tools like:
+            <ul style="margin: 0.5rem 0;">
+                <li><strong>Canva</strong> - Create/edit photos online</li>
+                <li><strong>Remove.bg</strong> - Remove background</li>
+                <li><strong>TinyPNG</strong> - Compress images</li>
+                <li><strong>Your smartphone</strong> - Portrait mode works great!</li>
+            </ul>
+        </div>
+
+        <div class="note" style="background: #d1ecf1; border-color: #17a2b8;">
+            <strong>🎨 Alternative:</strong> Until you add your photo, the site displays a nice icon placeholder with your initials. This looks professional and maintains the design integrity.
+        </div>
+    </div>
+</body>
+</html>
