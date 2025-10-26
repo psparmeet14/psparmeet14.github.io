@@ -85,9 +85,11 @@ const Posts = () => {
             <div className="col-lg-12" key={title}>
               <div className="card">
                 <div className="card-body">
-                  <div className="d-flex align-items-start mb-3">
-                    <i className="fab fa-linkedin fa-2x me-3" style={{ color: '#0077b5' }}></i>
-                    <div className="flex-grow-1">
+                  <div className="post-card-header mb-3">
+                    <span className="post-card-icon">
+                      <i className="fab fa-linkedin"></i>
+                    </span>
+                    <div className="post-card-heading">
                       <h3 className="card-title mb-1">{title}</h3>
                       <p className="card-date">
                         <i className="fas fa-calendar-alt"></i>
