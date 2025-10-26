@@ -1,159 +1,97 @@
-# Parmeet Singh Bhogal - Personal Portfolio Website
+# Parmeet Singh Bhogal – Portfolio (React SPA)
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live-brightgreen)](https://psparmeet14.github.io)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.3-purple)](https://getbootstrap.com/)
+[![React](https://img.shields.io/badge/React-19-61dafb)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-7.1-646cff)](https://vite.dev)
 [![License](https://img.shields.io/badge/License-Personal%20IP-blue)](LICENSE)
 
-## 🌟 Overview
+## ✨ Overview
 
-This is my personal portfolio website—a digital space where I showcase my professional work, share my intellectual property, and document my journey as a software engineer and human being. This website represents more than just a resume; it's a carefully curated collection of my thoughts, experiences, and growth.
+This repository now hosts a single-page application built with **React** and **Vite**. The site preserves every section of the previous static HTML portfolio—Home, About, Experience, Projects, Posts, Interests, Contact, and the photo guide—while enabling instant, reload-free navigation through React Router.
 
-## 🎯 Purpose
+## 🧱 Tech Stack
 
-- **Professional Showcase**: Display my experience, skills, and projects as a Senior Software Engineer
-- **Intellectual Property**: Share my LinkedIn posts, reflections, and insights
-- **Personal Brand**: Express who I am beyond the code
-- **Knowledge Sharing**: Contribute to the community through documented lessons learned
+- **React 19** with functional components and hooks
+- **React Router 7** for client-side routing
+- **Vite 7** for lightning-fast builds and dev experience
+- **Bootstrap 5.3** (JS + CSS) for layout utilities and responsive grid
+- **Font Awesome 6.4** for iconography
+- **Custom CSS** (`src/assets/style.css`) migrated from the original site
 
-## 🚀 Features
+## 🚀 Key Features
 
-### Professional Sections
-- **Home**: Introduction and overview with profile photo placeholder
-- **About**: Personal story, philosophy, and what drives me
-- **Experience**: Detailed professional journey with timeline view
-- **Projects**: Highlighted work and technical achievements
-- **Posts**: Collection of LinkedIn posts and reflections (intellectual property)
-- **Interests**: Hobbies, fitness, reading, and self-growth pursuits
-- **Contact**: Multiple ways to connect
+- Zero full-page reloads when switching sections
+- Exact content parity with the legacy HTML pages
+- Responsive design with Bootstrap utilities and custom gradients
+- Metadata updates per route for richer sharing/snippets
+- GitHub Pages friendly fallback (`public/404.html`) for deep links
+- Archived legacy static files kept under `legacy-html/` for reference
 
-### Design Features
-- **Modern UI**: Clean, professional design with gradient backgrounds
-- **Responsive**: Fully mobile-friendly using Bootstrap 5.3.3
-- **Smooth Animations**: Fade-in effects and hover transitions
-- **Icon Integration**: Font Awesome icons throughout
-- **Professional Typography**: Clear hierarchy and readability
-- **Card-based Layout**: Modern card components for content organization
-- **Gradient Accents**: Beautiful gradient effects for visual appeal
-
-## 🛠️ Tech Stack
-
-- **HTML5**: Semantic markup
-- **CSS3**: Custom styling with CSS variables
-- **Bootstrap 5.3.3**: Responsive framework
-- **Font Awesome 6.4.0**: Icon library
-- **JavaScript**: Bootstrap's interactive components
-
-## 📸 Adding Your Profile Photo
-
-To add your profile photo to the website:
-
-1. **Prepare your photo**:
-   - Recommended size: 300x300 pixels (or any square size)
-   - Format: JPG or PNG
-   - Name it: `profile-photo.jpg` (or `.png`)
-
-2. **Add the file**:
-   - Place your photo in the root directory of the website
-   - Or create an `images` folder and place it there
-
-3. **Update the HTML files**:
-   - In `index.html`, `about.html`, and other files with profile photo placeholders
-   - Replace this:
-   ```html
-   <div class="profile-photo">
-     <i class="fas fa-user"></i>
-   </div>
-   ```
-   - With this:
-   ```html
-   <img src="profile-photo.jpg" alt="Parmeet Singh Bhogal" class="profile-photo">
-   ```
-   - Or if using an images folder:
-   ```html
-   <img src="images/profile-photo.jpg" alt="Parmeet Singh Bhogal" class="profile-photo">
-   ```
-
-## 📁 Project Structure
+## �️ Project Structure
 
 ```
 psparmeet14.github.io/
-├── index.html          # Home page with introduction
-├── about.html          # Personal story and philosophy
-├── experience.html     # Professional journey and skills
-├── projects.html       # Highlighted work and achievements
-├── posts.html          # LinkedIn posts and reflections
-├── interests.html      # Personal interests and hobbies
-├── contact.html        # Contact information
-├── style.css           # Custom styling
-├── README.md           # Project documentation
-└── (add your photo here)
+├── public/
+│   ├── 404.html              # SPA fallback for GitHub Pages
+│   ├── profile-photo.jpg     # Public assets
+│   └── vite.svg
+├── src/
+│   ├── assets/style.css      # Global styles (migrated from legacy site)
+│   ├── components/           # Navbar, Layout, Footer
+│   ├── hooks/usePageMetadata # Utility for dynamic titles/descriptions
+│   ├── pages/                # React pages for each former HTML file
+│   └── main.jsx              # SPA entry point
+├── legacy-html/              # Archived static HTML/CSS/image
+├── package.json
+├── vite.config.js
+├── eslint.config.js
+└── README.md
 ```
 
-## 🎨 Customization Guide
+## ▶️ Getting Started
 
-### Colors
-The color scheme is defined in CSS variables in `style.css`:
-- Primary: #2c3e50 (dark blue)
-- Secondary: #3498db (bright blue)
-- Accent: #e74c3c (red)
-- Background gradient: Purple gradient (667eea to 764ba2)
-
-To change colors, edit the `:root` section in `style.css`.
-
-### Content Updates
-All content is in plain HTML, making it easy to:
-- Add new posts in `posts.html`
-- Update experience in `experience.html`
-- Add projects in `projects.html`
-- Modify any text directly in the HTML files
-
-### Adding New Posts
-In `posts.html`, copy the card structure and add new content:
-```html
-<div class="col-lg-4 col-md-6">
-  <div class="card h-100">
-    <div class="card-body">
-      <h5 class="card-title">Your Post Title</h5>
-      <p class="card-date">Date Posted</p>
-      <p class="card-text">Your content here...</p>
-      <div class="mt-3">
-        <span class="skill-tag">Tag1</span>
-        <span class="skill-tag">Tag2</span>
-      </div>
-    </div>
-  </div>
-</div>
+```bash
+npm install
+npm run dev        # Start the Vite dev server (http://localhost:5173)
+npm run build      # Production build to dist/
+npm run preview    # Preview the built assets locally
+npm run lint       # Lint the codebase
 ```
 
-## 🌐 Deployment
+## 📝 Content Mapping
 
-This website is designed to be hosted on GitHub Pages:
+| Route            | React Component                | Legacy Source            |
+|------------------|--------------------------------|--------------------------|
+| `/`              | `pages/Home.jsx`               | `index.html`             |
+| `/about`         | `pages/About.jsx`              | `about.html`             |
+| `/experience`    | `pages/Experience.jsx`         | `experience.html`        |
+| `/projects`      | `pages/Projects.jsx`           | `projects.html`          |
+| `/posts`         | `pages/Posts.jsx`              | `posts.html`             |
+| `/interests`     | `pages/Interests.jsx`          | `interests.html`         |
+| `/contact`       | `pages/Contact.jsx`            | `contact.html`           |
+| `/photo-guide`   | `pages/PhotoGuide.jsx`         | `photo-guide.html`       |
+| `*` (fallback)   | `pages/NotFound.jsx`           | —                        |
 
-1. Repository name: `psparmeet14.github.io`
-2. Push changes to the `main` branch
-3. GitHub Pages will automatically deploy
-4. Visit: `https://psparmeet14.github.io`
+Update copy or layout by editing the relevant React component while keeping the structure consistent with the migrated HTML.
 
-## 📝 Content Philosophy
+## 🎨 Styling
 
-This website embodies several principles:
+- Global look & feel lives in `src/assets/style.css` (identical to the original `style.css`).
+- Bootstrap CSS and JS are imported via npm modules in `main.jsx`.
+- Font Awesome icons load from the CDN defined in `index.html`.
 
-- **Intellectual Property**: All posts and reflections are original content
-- **Authenticity**: Genuine representation of skills and experiences
-- **Continuous Growth**: Regular updates as I learn and grow
-- **Value Creation**: Sharing insights that might help others
-- **Professional Pride**: Taking ownership of my work and journey
+## 📦 Deployment
 
-## 🔄 Future Enhancements
+1. Build the site:
+   ```bash
+   npm run build
+   ```
+2. Deploy the `dist/` folder to GitHub Pages (this repository is already configured for user pages at `https://psparmeet14.github.io`).
+3. `public/404.html` plus the redirect script embedded in `index.html` ensure deep links such as `/experience` work on GitHub Pages.
 
-Potential improvements to consider:
-- Blog post detail pages for longer content
-- Project case studies with technical deep-dives
-- Dark/light mode toggle
-- Contact form with backend integration
-- Analytics to track visitor engagement
-- RSS feed for blog posts
-- Search functionality
+## 🗄️ Legacy Static Site
+
+All original HTML, CSS, and the profile image are preserved under `legacy-html/`. They remain untouched for historical reference and can be compared against the new React views at any time.
 
 ## 📧 Contact
 
@@ -161,9 +99,9 @@ Potential improvements to consider:
 - **LinkedIn**: [Parmeet S. Bhogal](https://linkedin.com/in/parmeet-s-bhogal-6a259715a)
 - **GitHub**: [@psparmeet14](https://github.com/psparmeet14)
 
-## 📜 License
+## 📜 Content & License Notice
 
-This website and its content represent my personal intellectual property. The code structure is available for reference, but please don't copy the personal content, experiences, or reflections without permission.
+The code in this repository powers my personal portfolio and is shared for reference. All textual content, posts, reflections, and imagery remain my intellectual property—please do not reuse them without explicit permission.
 
 ---
 
