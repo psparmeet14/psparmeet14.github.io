@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feat/react-new-layout
   workflow_dispatch:
 
 permissions:
@@ -34,6 +35,9 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
