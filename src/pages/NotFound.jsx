@@ -8,14 +8,20 @@ const NotFound = () => {
   return (
     <>
       <header>
-        <h1>Page Not Found</h1>
+        <h1>
+          <i className="fas fa-exclamation-triangle"></i>
+          {' '}Page Not Found
+        </h1>
         <p>The page you're looking for doesn't exist or may have been moved.</p>
       </header>
 
       <Navbar />
 
       <div className="container main-container text-center">
-        <h2>Let's get you back on track</h2>
+        <h2>
+          <i className="fas fa-compass icon"></i>
+          Let's get you back on track
+        </h2>
         <p>
           Use the navigation bar to explore the site or click the button below to return to the homepage.
         </p>

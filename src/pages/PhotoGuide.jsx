@@ -63,13 +63,19 @@ const PhotoGuide = () => {
       <Navbar />
       <div style={styles.bodyWrapper}>
         <div style={styles.container}>
-          <h1>📸 Profile Photo Setup</h1>
+          <h1>
+            <i className="fas fa-camera" style={{ marginRight: '0.5rem' }}></i>
+            Profile Photo Setup
+          </h1>
           <p>This is a guide to help you add your professional photo to your portfolio website.</p>
 
           <div style={styles.profilePlaceholder}>PS</div>
 
           <div style={styles.instructions}>
-            <h3>Steps to Add Your Photo:</h3>
+            <h3>
+              <i className="fas fa-list-ol icon"></i>
+              Steps to Add Your Photo:
+            </h3>
             <ol>
               <li>
                 <strong>Take or choose a professional photo</strong>
@@ -115,7 +121,10 @@ const PhotoGuide = () => {
           </div>
 
           <div style={styles.note}>
-            <strong>💡 Tip:</strong>
+            <strong>
+              <i className="fas fa-lightbulb" style={{ marginRight: '0.3rem' }}></i>
+              Tip:
+            </strong>
             {' '}You can use free tools like:
             <ul style={{ margin: '0.5rem 0' }}>
               <li>
@@ -138,7 +147,10 @@ const PhotoGuide = () => {
           </div>
 
           <div style={styles.infoNote}>
-            <strong>🎨 Alternative:</strong>
+            <strong>
+              <i className="fas fa-palette" style={{ marginRight: '0.3rem' }}></i>
+              Alternative:
+            </strong>
             {' '}Until you add your photo, the site displays a nice icon placeholder with your initials. This looks professional and maintains the design integrity.
           </div>
         </div>
