@@ -9,6 +9,7 @@ import Interests from './pages/Interests'
 import Contact from './pages/Contact'
 import PhotoGuide from './pages/PhotoGuide'
 import NotFound from './pages/NotFound'
+import Books from './pages/Books'
 
 const App = () => (
   <Routes>
@@ -19,6 +20,7 @@ const App = () => (
       <Route path="projects" element={<Projects />} />
       <Route path="posts" element={<Posts />} />
       <Route path="interests" element={<Interests />} />
+  <Route path="books" element={<Books />} />
       <Route path="contact" element={<Contact />} />
       <Route path="photo-guide" element={<PhotoGuide />} />
       <Route path="*" element={<NotFound />} />

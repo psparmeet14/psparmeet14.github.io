@@ -6,6 +6,7 @@ const navLinks = [
   { to: '/experience', label: 'Experience', icon: 'fas fa-briefcase' },
   { to: '/projects', label: 'Projects', icon: 'fas fa-code-branch' },
   { to: '/posts', label: 'Posts', icon: 'fas fa-pencil-alt' },
+  { to: '/books', label: 'Books', icon: 'fas fa-book' },
   { to: '/interests', label: 'Interests', icon: 'fas fa-heart' },
   { to: '/contact', label: 'Contact', icon: 'fas fa-envelope' },
 ]
