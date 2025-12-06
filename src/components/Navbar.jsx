@@ -17,7 +17,7 @@ function Navbar() {
       <div className="side-nav__brand">
         <NavLink to="/" className="side-nav__title">
           <i className="fas fa-home icon" aria-hidden="true"></i>
-          Parmeet Singh
+          <span className="side-nav__name">Parmeet Singh</span>
         </NavLink>
         <p className="side-nav__subtitle">Software Engineer & Storyteller</p>
       </div>
