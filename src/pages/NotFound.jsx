@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import Navbar from '../components/Navbar'
 import { usePageMetadata } from '../hooks/usePageMetadata'
 
 const NotFound = () => {
@@ -14,8 +13,6 @@ const NotFound = () => {
         </h1>
         <p>The page you're looking for doesn't exist or may have been moved.</p>
       </header>
-
-      <Navbar />
 
       <div className="container main-container text-center">
         <h2>

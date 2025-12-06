@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar'
 import { usePageMetadata } from '../hooks/usePageMetadata'
 
 const bookShelves = [
@@ -67,8 +66,6 @@ const Books = () => {
         </h1>
   <p>Tracking what I've learned, what I'm exploring, and what's queued up.</p>
       </header>
-
-      <Navbar />
 
       <div className="container main-container">
         <section className="mb-5">

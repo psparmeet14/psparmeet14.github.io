@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar'
 import { usePageMetadata } from '../hooks/usePageMetadata'
 
 const Home = () => {
@@ -31,8 +30,6 @@ const Home = () => {
           </div>
         </div>
       </header>
-
-      <Navbar />
 
       <div className="container main-container">
         <div className="welcome-section">

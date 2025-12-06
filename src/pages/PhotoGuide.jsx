@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar'
 import { usePageMetadata } from '../hooks/usePageMetadata'
 
 const styles = {
@@ -60,7 +59,6 @@ const PhotoGuide = () => {
 
   return (
     <div style={{ background: '#f0f0f0', minHeight: '100vh' }}>
-      <Navbar />
       <div style={styles.bodyWrapper}>
         <div style={styles.container}>
           <h1>

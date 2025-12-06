@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar'
 import { usePageMetadata } from '../hooks/usePageMetadata'
 
 const Contact = () => {
@@ -16,8 +15,6 @@ const Contact = () => {
         </h1>
         <p>Let's Connect and Collaborate</p>
       </header>
-
-      <Navbar />
 
       <div className="container main-container">
         <div className="welcome-section">

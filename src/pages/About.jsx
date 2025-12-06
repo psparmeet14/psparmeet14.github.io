@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import Navbar from '../components/Navbar'
 import { usePageMetadata } from '../hooks/usePageMetadata'
 
 const About = () => {
@@ -25,8 +24,6 @@ const About = () => {
           </div>
         </div>
       </header>
-
-      <Navbar />
 
       <div className="container main-container">
         <h2>

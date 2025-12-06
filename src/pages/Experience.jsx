@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import Navbar from '../components/Navbar'
 import { usePageMetadata } from '../hooks/usePageMetadata'
 
 const Experience = () => {
@@ -17,8 +16,6 @@ const Experience = () => {
         </h1>
         <p>6+ Years of Building Scalable Backend Systems</p>
       </header>
-
-      <Navbar />
 
       <div className="container main-container">
         <h2>
