@@ -426,7 +426,11 @@ ul li::marker {
 }
 
 .card-body {
-    padding: 2rem;
+    padding: 1.5rem;
+}
+
+.card .icon {
+    margin-bottom: 0.15rem;
 }
 
 .card-title {
@@ -614,7 +618,7 @@ footer a:hover {
     }
     
     .card-body {
-        padding: 1.5rem;
+        padding: 1.1rem 1.25rem;
     }
 }
 
@@ -1034,7 +1038,11 @@ ul li::marker {
 }
 
 .card-body {
-    padding: 2.5rem;
+    padding: 1.5rem;
+}
+
+.card .icon {
+    margin-bottom: 0.15rem;
 }
 
 .card-title {
