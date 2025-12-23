@@ -59,14 +59,6 @@ const Books = () => {
 
   return (
     <>
-      <header>
-        <h1>
-          <i className="fas fa-book"></i>
-          {' '}Books Read
-        </h1>
-  <p>Tracking what I've learned, what I'm exploring, and what's queued up.</p>
-      </header>
-
       <div className="container main-container">
         <section className="mb-5">
           <h2>

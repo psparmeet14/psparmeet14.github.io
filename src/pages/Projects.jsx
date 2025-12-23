@@ -9,14 +9,6 @@ const Projects = () => {
 
   return (
     <>
-      <header>
-        <h1>
-          <i className="fas fa-code-branch"></i>
-          {' '}Projects &amp; Work
-        </h1>
-        <p>Building Solutions That Scale and Endure</p>
-      </header>
-
       <div className="container main-container">
         <h2>
           <i className="fas fa-code-branch icon"></i>

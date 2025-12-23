@@ -8,14 +8,6 @@ const Contact = () => {
 
   return (
     <>
-      <header>
-        <h1>
-          <i className="fas fa-envelope"></i>
-          {' '}Get in Touch
-        </h1>
-        <p>Let's Connect and Collaborate</p>
-      </header>
-
       <div className="container main-container">
         <div className="welcome-section">
           <h2>

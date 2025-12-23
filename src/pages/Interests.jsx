@@ -9,14 +9,6 @@ const Interests = () => {
 
   return (
     <>
-      <header>
-        <h1>
-          <i className="fas fa-heart"></i>
-          {' '}Interests &amp; Passions
-        </h1>
-        <p>Beyond Software Development</p>
-      </header>
-
       <div className="container main-container">
         <h2>
           <i className="fas fa-heart icon"></i>

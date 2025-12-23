@@ -19,7 +19,7 @@ function Navbar() {
           <i className="fas fa-home icon" aria-hidden="true"></i>
           <span className="side-nav__name">Parmeet Singh</span>
         </NavLink>
-        <p className="side-nav__subtitle">Software Engineer & Storyteller</p>
+        <p className="side-nav__subtitle">Software Engineer</p>
       </div>
 
       <ul className="side-nav__links">

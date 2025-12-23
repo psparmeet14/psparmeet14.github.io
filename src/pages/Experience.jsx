@@ -9,14 +9,6 @@ const Experience = () => {
 
   return (
     <>
-      <header>
-        <h1>
-          <i className="fas fa-briefcase"></i>
-          {' '}Professional Experience
-        </h1>
-        <p>6+ Years of Building Scalable Backend Systems</p>
-      </header>
-
       <div className="container main-container">
         <h2>
           <i className="fas fa-briefcase icon"></i>
@@ -42,8 +34,7 @@ const Experience = () => {
           <h4>Key Achievements &amp; Responsibilities:</h4>
           <ul>
             <li>
-              Contributed to the development of CatalystOne's cloud-based HR software, focusing on <strong>Core HR and Workflow module</strong>—automated
-              employee onboarding and offboarding process
+              Designed and developed core backend features for CatalystOne's cloud-based HR platform, supporting employee onboarding and offboarding workflows at scale.
             </li>
             <li>Advocated for clean code practices and clean architecture within the team</li>
             <li>Designed <strong>API specifications with OpenAPI</strong> and implemented best practices for RESTful API development</li>
@@ -53,7 +44,9 @@ const Experience = () => {
               in-memory caching, optimized SQL queries, JSON minification, and lazy loading
             </li>
             <li>Contributed to strategy meetings for the Workflow module, shaping its future architecture</li>
-            <li>Maintained clear communication with stakeholders and utilized <strong>Miro</strong> for planning project milestones</li>
+            <li>
+              Coordinated with product managers and cross-functional teams using <strong>Miro</strong>-based planning to track milestones, dependencies, and delivery timelines.
+            </li>
             <li>Delivered key features in major releases, resolved critical bugs, and led peer code reviews</li>
             <li>Developed and maintained <strong>unit and integration tests</strong> to ensure code quality</li>
             <li>
@@ -93,7 +86,7 @@ const Experience = () => {
         <div className="row g-4 mt-3">
           <div className="col-md-6">
             <div className="card">
-              <div className="card-body">
+              <div className="card-body experience-card-body">
                 <h3>
                   <i className="fas fa-code icon"></i>
                   Languages
@@ -112,7 +105,7 @@ const Experience = () => {
 
           <div className="col-md-6">
             <div className="card">
-              <div className="card-body">
+              <div className="card-body experience-card-body">
                 <h3>
                   <i className="fas fa-server icon"></i>
                   Tools and Frameworks
@@ -135,7 +128,7 @@ const Experience = () => {
 
           <div className="col-md-6">
             <div className="card">
-              <div className="card-body">
+              <div className="card-body experience-card-body">
                 <h3>
                   <i className="fas fa-paint-brush icon"></i>
                   Web Technologies
@@ -154,7 +147,7 @@ const Experience = () => {
 
           <div className="col-md-6">
             <div className="card">
-              <div className="card-body">
+              <div className="card-body experience-card-body">
                 <h3>
                   <i className="fas fa-database icon"></i>
                   Database
@@ -173,7 +166,7 @@ const Experience = () => {
 
           <div className="col-md-6">
             <div className="card">
-              <div className="card-body">
+              <div className="card-body experience-card-body">
                 <h3>
                   <i className="fas fa-cloud icon"></i>
                   Cloud Technologies
@@ -192,7 +185,7 @@ const Experience = () => {
 
           <div className="col-md-6">
             <div className="card">
-              <div className="card-body">
+              <div className="card-body experience-card-body">
                 <h3>
                   <i className="fas fa-vial icon"></i>
                   Testing Framework
@@ -211,7 +204,7 @@ const Experience = () => {
 
           <div className="col-md-12">
             <div className="card">
-              <div className="card-body">
+              <div className="card-body experience-card-body">
                 <h3>
                   <i className="fas fa-cube icon"></i>
                   Other Skills
@@ -245,7 +238,7 @@ const Experience = () => {
         <div className="row g-4 mt-3">
           <div className="col-md-12">
             <div className="card">
-              <div className="card-body">
+              <div className="card-body experience-card-body">
                 <h3>
                   <i className="fas fa-university icon"></i>
                   Bachelor of Technology in Computer Science &amp; Engineering
@@ -275,7 +268,7 @@ const Experience = () => {
 
           <div className="col-md-12">
             <div className="card">
-              <div className="card-body">
+              <div className="card-body experience-card-body">
                 <h3>
                   <i className="fas fa-school icon"></i>
                   Secondary Education
@@ -304,7 +297,7 @@ const Experience = () => {
         </h2>
 
         <div className="card mt-3">
-          <div className="card-body">
+          <div className="card-body experience-card-body">
             <ul>
               <li>Participated in CatalystOne hackathons and various organizational events</li>
               <li>Received the <strong>All-Round Best Student award</strong> in both 10th and 12th grade</li>

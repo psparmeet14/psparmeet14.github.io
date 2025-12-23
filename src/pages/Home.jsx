@@ -3,7 +3,7 @@ import { usePageMetadata } from '../hooks/usePageMetadata'
 const Home = () => {
   usePageMetadata(
     'Parmeet Singh Bhogal | Software Engineer',
-    'Portfolio of Parmeet Singh Bhogal - Software Engineer specializing in Java, Spring Boot, Microservices, and backend development with over 6 years of experience.'
+    'Portfolio of Parmeet Singh Bhogal - Software Engineer specializing in Java, Spring Boot, Microservices, and backend development with 7+ years of experience.'
   )
 
   return (
@@ -21,36 +21,65 @@ const Home = () => {
             <h1>Parmeet Singh Bhogal</h1>
             <p>
               <i className="fas fa-code icon"></i>
-              Software Engineer | 6+ Years Experience
+              Building resilient backend platforms for HR at scale
             </p>
             <p>
               <i className="fas fa-seedling icon"></i>
-              Backend Specialist | Microservices &amp; Spring Boot Expert
+              Clean architecture • Workflow automation • System clarity
             </p>
           </div>
         </div>
       </header>
 
       <div className="container main-container">
-        <div className="welcome-section">
-          <h2>Welcome to My Digital Space</h2>
-          <p className="lead">
-            Result-oriented and passionate software engineer with an unceasing curiosity to learn, possessing
-            over 6 years of experience in cloud-based application development. I specialize in designing and
-            developing enterprise application software of the highest quality, focusing on Core HR systems and
-            workflow automation at CatalystOne Solutions in Chandigarh, India.
-          </p>
+        <div className="home-hero-grid">
+          <div className="home-hero__primary">
+            <h2>Welcome to My Digital Space</h2>
+            <p className="lead">
+              I design calm, scalable backend systems for Core HR products—translating complex onboarding and workflow
+              requirements into dependable services that teams can ship with confidence.
+            </p>
+            <p>
+              I care about technical clarity, predictable releases, and documenting the why behind every architectural call.
+              This site captures my work, principles, and ongoing experiments.
+            </p>
+          </div>
+          <div className="home-hero__metrics">
+            <div className="home-hero__metric">
+              <span>Currently</span>
+              <strong>Senior Engineer · CatalystOne</strong>
+            </div>
+            <div className="home-hero__metric">
+              <span>Focus</span>
+              <strong>Core HR &amp; Workflow Automation</strong>
+            </div>
+            <div className="home-hero__metric">
+              <span>Toolbox</span>
+              <strong>Java · Spring · Azure</strong>
+            </div>
+            <div className="home-hero__metric">
+              <span>Mindset</span>
+              <strong>Clean Code + Fitness Discipline</strong>
+            </div>
+          </div>
         </div>
 
-        <div className="row g-4 mt-4">
+        <section className="mt-5">
+          <h2>Focus Areas</h2>
+          <p className="lead">
+            A quick snapshot of where I create the most leverage inside product engineering teams.
+          </p>
+        </section>
+
+        <div className="row g-4">
           <div className="col-md-4">
             <div className="card">
               <div className="card-body text-center">
                 <i className="fas fa-microchip fa-3x mb-3" style={{ color: '#3498db' }}></i>
-                <h3 className="card-title">Backend Development</h3>
+                <h3 className="card-title">Backend Systems</h3>
                 <p className="card-text">
-                  Expert in Java, Spring Boot, and microservices architecture. Building scalable, maintainable backend
-                  systems.
+                  Designing API-first services with layered architecture, strong boundaries, and healthy monitoring so
+                  change is predictable.
                 </p>
               </div>
             </div>
@@ -60,9 +89,10 @@ const Home = () => {
             <div className="card">
               <div className="card-body text-center">
                 <i className="fas fa-project-diagram fa-3x mb-3" style={{ color: '#e74c3c' }}></i>
-                <h3 className="card-title">Microservices Migration</h3>
+                <h3 className="card-title">Microservice Transition</h3>
                 <p className="card-text">
-                  Experience migrating monolithic applications to microservices with Spring Boot and Azure.
+                  Guiding teams through monolith-to-microservice journeys—safeguarding business logic while improving
+                  deployment agility.
                 </p>
               </div>
             </div>
@@ -74,62 +104,69 @@ const Home = () => {
                 <i className="fas fa-cogs fa-3x mb-3" style={{ color: '#2ecc71' }}></i>
                 <h3 className="card-title">Workflow Automation</h3>
                 <p className="card-text">
-                  Designing and implementing automated workflows for enterprise HR systems serving 10K+ users.
+                  Automating onboarding and compliance flows so IT, payroll, and managers move in sync when a person joins
+                  or transitions.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-5">
-          <h2>What I Do</h2>
-          <p>
-            I design and build scalable backend systems for Core HR platforms at CatalystOne Solutions. My work involves
-            contributing to cloud-based HR software development, focusing on Core HR and Workflow modules that automate
-            employee onboarding and offboarding processes. I advocate for clean code practices and clean architecture
-            within the team.
-          </p>
-          <p>
-            I've transformed legacy backend code into scalable, maintainable layered architecture and optimized workflow
-            dashboard performance for 13,000+ records, reducing load time to 2 seconds through partial data loading,
-            in-memory caching, optimized SQL queries, JSON minification, and lazy loading. I actively contribute to
-            full-stack development and have worked on creating survey modules while maintaining clear communication with
-            stakeholders.
-          </p>
-        </div>
+        <section className="mt-5">
+          <h2>Recent Impact</h2>
+          <div className="home-impact-grid">
+            <div className="home-impact-card">
+              <h4>Workflow dashboard</h4>
+              <p>13K+ employee records optimized to load in 2 seconds through partial fetch, caching, and SQL tuning.</p>
+            </div>
+            <div className="home-impact-card">
+              <h4>Monolith → Microservice</h4>
+              <p>Re-architected a core HR module using Spring Boot, clear API contracts, and multi-env deployments.</p>
+            </div>
+            <div className="home-impact-card">
+              <h4>Collaboration systems</h4>
+              <p>Defined onboarding workflows that align IT, payroll, and managers via automated tasks and alerts.</p>
+            </div>
+          </div>
+        </section>
 
-        <div className="social-links">
-          <a
-            href="https://linkedin.com/in/parmeet-s-bhogal-6a259715a"
-            target="_blank"
-            rel="noreferrer"
-            className="social-link"
-          >
-            <i className="fab fa-linkedin"></i>
-            Connect on LinkedIn
-          </a>
-          <a
-            href="https://github.com/psparmeet14"
-            target="_blank"
-            rel="noreferrer"
-            className="social-link"
-          >
-            <i className="fab fa-github"></i>
-            View GitHub
-          </a>
-          <a href="mailto:psparmeet14@gmail.com" className="social-link">
-            <i className="fas fa-envelope"></i>
-            Send Email
-          </a>
-        </div>
-      </div>
+        <section className="mt-5">
+          <h2>Operating Principles</h2>
+          <ul className="about-summary-list">
+            <li>Design from the business process inward—clarity beats cleverness.</li>
+            <li>Automate observability and feedback loops so issues surface before users notice.</li>
+            <li>Invest in documentation and pairing to keep teams aligned as systems evolve.</li>
+          </ul>
+        </section>
 
-      <div className="container my-5">
-        <h2>Welcome!</h2>
-        <p>
-          Hi, I’m Parmeet Singh Bhogal. I design and build scalable backend systems and enjoy simplifying complexity in
-          software. Beyond code, I’m passionate about self-growth, fitness, and writing reflective insights.
-        </p>
+        <div className="cta-panel">
+          <h3>Let’s build calmer systems.</h3>
+          <p>Open to discussing backend architecture, workflow automation, or coaching teams on clean delivery.</p>
+          <div className="social-links">
+            <a
+              href="https://linkedin.com/in/parmeet-s-bhogal-6a259715a"
+              target="_blank"
+              rel="noreferrer"
+              className="social-link"
+            >
+              <i className="fab fa-linkedin"></i>
+              Connect on LinkedIn
+            </a>
+            <a
+              href="https://github.com/psparmeet14"
+              target="_blank"
+              rel="noreferrer"
+              className="social-link"
+            >
+              <i className="fab fa-github"></i>
+              View GitHub
+            </a>
+            <a href="mailto:psparmeet14@gmail.com" className="social-link">
+              <i className="fas fa-envelope"></i>
+              Send Email
+            </a>
+          </div>
+        </div>
       </div>
     </>
   )

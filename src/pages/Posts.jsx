@@ -60,14 +60,6 @@ const Posts = () => {
 
   return (
     <>
-      <header>
-        <h1>
-          <i className="fas fa-pencil-alt"></i>
-          {' '}Posts &amp; Insights
-        </h1>
-        <p>Sharing Thoughts on Engineering, Growth, and Learning</p>
-      </header>
-
       <div className="container main-container">
         <h2>
           <i className="fas fa-pencil-alt icon"></i>
