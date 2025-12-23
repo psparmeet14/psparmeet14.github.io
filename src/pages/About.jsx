@@ -70,6 +70,10 @@ const About = () => {
             From there I shape services that feel calm to operate—clear logs, minimal surprises, and documentation people
             actually reference.
           </p>
+          <p>
+            I care about technical clarity, predictable releases, and documenting the why behind every architectural call.
+            This site captures my work, principles, and ongoing experiments.
+          </p>
           <ul className="about-summary-list">
             <li>Designs and ships workflow automation for enterprise HR platforms.</li>
             <li>Champions layered architecture, SOLID principles, and reliable testing.</li>

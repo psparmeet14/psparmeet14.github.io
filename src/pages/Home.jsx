@@ -21,11 +21,11 @@ const Home = () => {
             <h1>Parmeet Singh Bhogal</h1>
             <p>
               <i className="fas fa-code icon"></i>
-              Building resilient backend platforms for HR at scale
+              Senior Software Engineer
             </p>
             <p>
               <i className="fas fa-seedling icon"></i>
-              Clean architecture • Workflow automation • System clarity
+              Fitness &amp; Growth Enthusiast
             </p>
           </div>
         </div>
@@ -36,12 +36,12 @@ const Home = () => {
           <div className="home-hero__primary">
             <h2>Welcome to My Digital Space</h2>
             <p className="lead">
-              I design calm, scalable backend systems for Core HR products—translating complex onboarding and workflow
-              requirements into dependable services that teams can ship with confidence.
+              Senior Software Engineer with 7+ years in the tech space. I’m curious about system design, backend development,
+              and the evolving world of AI. Always learning and trying to build things that last.
             </p>
             <p>
-              I care about technical clarity, predictable releases, and documenting the why behind every architectural call.
-              This site captures my work, principles, and ongoing experiments.
+              Outside of work, you’ll find me lifting weights, playing tennis, or reading about money, mindset, and growth.
+              Just here to share, learn, and grow a little every day.
             </p>
           </div>
           <div className="home-hero__metrics">
