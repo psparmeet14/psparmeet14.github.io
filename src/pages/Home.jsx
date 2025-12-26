@@ -1,10 +1,62 @@
 import { usePageMetadata } from '../hooks/usePageMetadata'
+import VerticalTimeline from '../components/VerticalTimeline'
 
 const Home = () => {
   usePageMetadata(
     'Parmeet Singh Bhogal | Software Engineer',
     'Portfolio of Parmeet Singh Bhogal - Software Engineer specializing in Java, Spring Boot, Microservices, and backend development with 7+ years of experience.'
   )
+
+  const milestonesTimeline = [
+    {
+      dateLabel: 'December 2025',
+      title: 'Prompt Engineering',
+      description: 'Studying prompting patterns + evaluation; building small experiments to improve reliability.',
+      tags: ['AI'],
+      highlights: ['Prompt patterns', 'Structured outputs', 'Evaluation & iteration']
+    },
+    {
+      dateLabel: 'November 2025',
+      title: 'System Design Practice',
+      description: 'Practicing real-world design prompts and trade-off thinking (scaling, caching, queues).',
+      tags: ['System Design'],
+      highlights: ['Caching', 'Queues', 'Data modeling', 'Tradeoffs']
+    },
+    {
+      dateLabel: 'October 2021',
+      title: 'React refresh + component patterns',
+      description: 'Refocused on reusable UI patterns and data-driven components.',
+      tags: ['React', 'UI'],
+      highlights: ['Composition over inheritance', 'Reusable layouts and hooks']
+    },
+    {
+      dateLabel: 'March 2021',
+      title: 'API design + documentation habits',
+      description: 'Started writing clearer API contracts and documenting decisions.',
+      tags: ['API', 'Docs'],
+      highlights: ['Request/response contracts', 'Decision logs for tradeoffs']
+    },
+    {
+      dateLabel: 'November 2020',
+      title: 'Data structures & algorithms rebuild',
+      description: 'Revisited fundamentals with a focus on problem-solving speed.',
+      tags: ['DSA'],
+      highlights: ['Arrays/strings patterns', 'Hash maps and heaps refresher']
+    },
+    {
+      dateLabel: 'June 2020',
+      title: 'Testing mindset: unit + integration',
+      description: 'Improved confidence in changes by leaning into automated tests.',
+      tags: ['Testing'],
+      highlights: ['Arrange-Act-Assert', 'Test small + test behavior']
+    },
+    {
+      dateLabel: '2018',
+      title: 'Add your starting point',
+      description: 'Placeholder — add early career milestones, learning goals, and projects you started.',
+      tags: ['Placeholder']
+    }
+  ]
 
   return (
     <>
@@ -63,6 +115,14 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        <section className="mt-5">
+          <h2>Milestones Timeline</h2>
+          <p className="lead">
+            A concise vertical timeline of what I’m learning, practising, and building.
+          </p>
+          <VerticalTimeline data={milestonesTimeline} />
+        </section>
 
         <section className="mt-5">
           <h2>Focus Areas</h2>

@@ -742,6 +742,251 @@ ul li::marker {
     margin-bottom: 0.5rem;
 }
 
+/* ===== Vertical Milestones Timeline (Home) ===== */
+.vtimeline {
+    margin-top: 1.25rem;
+    padding: 1.35rem 1.35rem 0.5rem;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(44, 62, 80, 0.14);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.vtimeline__controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.85rem;
+}
+
+.vtimeline__toggle {
+    padding: 0.55rem 1.1rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+
+.vtimeline__items {
+    padding: 0.35rem 0.25rem 0.25rem;
+}
+
+.vtimeline__items--grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.15rem;
+}
+
+.vtimeline__years {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.vtimeline__year {
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    overflow: hidden;
+}
+
+.vtimeline__year-summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.75rem 0.85rem;
+}
+
+.vtimeline__year-summary::-webkit-details-marker {
+    display: none;
+}
+
+.vtimeline__year-label {
+    font-weight: 750;
+    letter-spacing: 0.3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--primary-color);
+}
+
+.vtimeline__year-chevron {
+    width: 0.55rem;
+    height: 0.55rem;
+    display: inline-block;
+    border-right: 2px solid rgba(44, 62, 80, 0.55);
+    border-bottom: 2px solid rgba(44, 62, 80, 0.55);
+    transform: rotate(-45deg);
+    transition: transform 160ms ease, border-color 160ms ease;
+    flex: 0 0 auto;
+}
+
+.vtimeline__year[open] .vtimeline__year-chevron {
+    transform: rotate(45deg);
+    border-right-color: rgba(44, 62, 80, 0.68);
+    border-bottom-color: rgba(44, 62, 80, 0.68);
+}
+
+.vtimeline__year-summary-text {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.vtimeline__year > .vtimeline__flat {
+    padding: 0.2rem 0.85rem 0.85rem 2.1rem;
+}
+
+.vtimeline__flat {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+
+    /* leave room for the spine + dots */
+    padding-left: 1.25rem;
+}
+
+.vtimeline__flat::before {
+    content: '';
+    position: absolute;
+    left: 0.52rem;
+    top: 0.35rem;
+    bottom: 0.35rem;
+    width: 2px;
+    background: rgba(52, 152, 219, 0.35);
+    border-radius: 999px;
+}
+
+.vtimeline__items--compact {
+    gap: 0.55rem;
+}
+
+.vtimeline__milestone {
+    border-radius: 12px;
+    border: 1px solid rgba(44, 62, 80, 0.12);
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+}
+
+.vtimeline__milestone-summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.7rem 0.85rem;
+
+    /* marker anchor */
+    position: relative;
+}
+
+.vtimeline__milestone--flat > .vtimeline__milestone-summary::before {
+    content: '';
+    position: absolute;
+    left: -1.05rem;
+    top: 0.95rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.95), 0 0 0 5px rgba(52, 152, 219, 0.25);
+}
+
+.vtimeline__milestone--flat[open] > .vtimeline__milestone-summary::before {
+    background: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.95), 0 0 0 5px rgba(231, 76, 60, 0.22);
+}
+
+.vtimeline__milestone-summary::-webkit-details-marker {
+    display: none;
+}
+
+.vtimeline__milestone-text {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.vtimeline__milestone-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.25;
+}
+
+.vtimeline__milestone-subtitle {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.35;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.vtimeline__milestone-date {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    white-space: nowrap;
+    padding-top: 0.1rem;
+}
+
+.vtimeline__milestone-body {
+    padding: 0.2rem 0.85rem 0.85rem;
+}
+
+.vtimeline__milestone-body ul {
+    margin-bottom: 0.6rem;
+}
+
+.vtimeline__milestone-body ul li {
+    margin-bottom: 0.35rem;
+}
+
+.vtimeline__items--grid .timeline-item {
+    margin-bottom: 0;
+    height: 100%;
+    border-left-width: 2px;
+}
+
+.vtimeline__item {
+    margin-bottom: 1.75rem;
+}
+
+.vtimeline__tags {
+    margin-top: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .vtimeline {
+        padding: 1.1rem 1rem 0.35rem;
+    }
+
+    .vtimeline__controls {
+        justify-content: stretch;
+    }
+
+    .vtimeline__toggle {
+        width: 100%;
+    }
+
+    .vtimeline__items--grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1100px) {
+    .vtimeline__items--grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
 /* ===== Skill Tags ===== */
 .skill-tag {
     display: inline-block;
