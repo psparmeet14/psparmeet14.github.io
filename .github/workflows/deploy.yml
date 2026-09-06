@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - feat/react-new-layout
   workflow_dispatch:
 
 permissions:

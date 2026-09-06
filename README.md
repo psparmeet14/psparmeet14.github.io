@@ -1,108 +1,39 @@
-# Parmeet Singh Bhogal – Portfolio (React SPA)
+# psparmeet14.github.io
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-brightgreen)](https://psparmeet14.github.io)
-[![React](https://img.shields.io/badge/React-19-61dafb)](https://react.dev)
-[![Vite](https://img.shields.io/badge/Vite-7.1-646cff)](https://vite.dev)
-[![License](https://img.shields.io/badge/License-Personal%20IP-blue)](LICENSE)
+Personal site of Parmeet Singh Bhogal, live at <https://psparmeet14.github.io>. One page: who I am, selected work, experience, toolbox, writing, what I'm doing now, and how to get in touch.
 
-## ✨ Overview
+## Stack
 
-This repository now hosts a single-page application built with **React** and **Vite**. The site preserves every section of the previous static HTML portfolio—Home, About, Experience, Projects, Posts, Interests, Contact, and the photo guide—while enabling instant, reload-free navigation through React Router.
+React 19 + Vite 7, plain CSS (design tokens for light and dark, no framework), Google Fonts (Newsreader, Source Sans 3, IBM Plex Mono). Every push to `main` builds and deploys to GitHub Pages via `.github/workflows/deploy.yml`.
 
-## 🧱 Tech Stack
-
-- **React 19** with functional components and hooks
-- **React Router 7** for client-side routing
-- **Vite 7** for lightning-fast builds and dev experience
-- **Bootstrap 5.3** (JS + CSS) for layout utilities and responsive grid
-- **Font Awesome 6.4** for iconography
-- **Custom CSS** (`src/assets/style.css`) migrated from the original site
-
-## 🚀 Key Features
-
-- Zero full-page reloads when switching sections
-- Exact content parity with the legacy HTML pages
-- Responsive design with Bootstrap utilities and custom gradients
-- Metadata updates per route for richer sharing/snippets
-- GitHub Pages friendly fallback (`public/404.html`) for deep links
-- Archived legacy static files kept under `legacy-html/` for reference
-
-## �️ Project Structure
-
-```
-psparmeet14.github.io/
-├── public/
-│   ├── 404.html              # SPA fallback for GitHub Pages
-│   ├── profile-photo.jpg     # Public assets
-│   └── vite.svg
-├── src/
-│   ├── assets/style.css      # Global styles (migrated from legacy site)
-│   ├── components/           # Navbar, Layout, Footer
-│   ├── hooks/usePageMetadata # Utility for dynamic titles/descriptions
-│   ├── pages/                # React pages for each former HTML file
-│   └── main.jsx              # SPA entry point
-├── legacy-html/              # Archived static HTML/CSS/image
-├── package.json
-├── vite.config.js
-├── eslint.config.js
-└── README.md
-```
-
-## ▶️ Getting Started
+## Run
 
 ```bash
 npm install
-npm run dev        # Start the Vite dev server (http://localhost:5173)
-npm run build      # Production build to dist/
-npm run preview    # Preview the built assets locally
-npm run lint       # Lint the codebase
+npm run dev       # http://localhost:5173
+npm run build     # production build into dist/
+npm run preview   # serve the built site locally
+npm run lint
 ```
 
-## 📝 Content Mapping
+## Where things live
 
-| Route            | React Component                | Legacy Source            |
-|------------------|--------------------------------|--------------------------|
-| `/`              | `pages/Home.jsx`               | `index.html`             |
-| `/about`         | `pages/About.jsx`              | `about.html`             |
-| `/experience`    | `pages/Experience.jsx`         | `experience.html`        |
-| `/projects`      | `pages/Projects.jsx`           | `projects.html`          |
-| `/posts`         | `pages/Posts.jsx`              | `posts.html`             |
-| `/interests`     | `pages/Interests.jsx`          | `interests.html`         |
-| `/contact`       | `pages/Contact.jsx`            | `contact.html`           |
-| `/photo-guide`   | `pages/PhotoGuide.jsx`         | `photo-guide.html`       |
-| `*` (fallback)   | `pages/NotFound.jsx`           | —                        |
+| Path | What it holds |
+| --- | --- |
+| `src/data/site.js` | **All content** — copy, links, projects, experience, toolbox, posts, the "Now" line. Edit here first. |
+| `src/App.jsx` | Section order. Numbering and the nav menu are derived from this list. |
+| `src/components/` | One component per section; `Section.jsx` is the shared heading wrapper. |
+| `src/styles.css` | Tokens (colours, fonts, spacing) and layout. Breakpoints: 720px hero stacks + work grid goes single column, 800px phone menu + stacked rows, 1024px hero photo size. |
+| `index.html` | Title, description, social preview (Open Graph / Twitter) and JSON-LD. Update these with `site.js` if the headline changes. |
+| `public/` | `profile-photo.jpg`, `og-image.png` (1200×630 link preview), `favicon.svg`, `apple-touch-icon.png`, and `404.html`, which sends the old `/about`, `/projects`… URLs to the matching section. |
 
-Update copy or layout by editing the relevant React component while keeping the structure consistent with the migrated HTML.
+## Common edits
 
-## 🎨 Styling
+- **Add a project** — append an entry to `work` in `site.js` (links are optional).
+- **Publish a post** — fill in `url` (and `date`) on a `posts` entry. The Writing section and its nav link appear automatically once one post has a URL.
+- **Add the résumé** — put `resume.pdf` in `public/` and set `profile.resumeUrl = '/resume.pdf'`; a Resume button appears in the nav.
+- **Change the photo** — replace `public/profile-photo.jpg` with a square image (600px or larger), then regenerate `og-image.png` and `apple-touch-icon.png` from it.
 
-- Global look & feel lives in `src/assets/style.css` (identical to the original `style.css`).
-- Bootstrap CSS and JS are imported via npm modules in `main.jsx`.
-- Font Awesome icons load from the CDN defined in `index.html`.
+## Content
 
-## 📦 Deployment
-
-1. Build the site:
-   ```bash
-   npm run build
-   ```
-2. Deploy the `dist/` folder to GitHub Pages (this repository is already configured for user pages at `https://psparmeet14.github.io`).
-3. `public/404.html` plus the redirect script embedded in `index.html` ensure deep links such as `/experience` work on GitHub Pages.
-
-## 🗄️ Legacy Static Site
-
-All original HTML, CSS, and the profile image are preserved under `legacy-html/`. They remain untouched for historical reference and can be compared against the new React views at any time.
-
-## 📧 Contact
-
-- **Email**: psparmeet14@gmail.com
-- **LinkedIn**: [Parmeet S. Bhogal](https://linkedin.com/in/parmeet-s-bhogal-6a259715a)
-- **GitHub**: [@psparmeet14](https://github.com/psparmeet14)
-
-## 📜 Content & License Notice
-
-The code in this repository powers my personal portfolio and is shared for reference. All textual content, posts, reflections, and imagery remain my intellectual property—please do not reuse them without explicit permission.
-
----
-
-**Built with ❤️ and dedication** | © 2025 Parmeet Singh Bhogal
+The code is shared for reference. The text and images are mine — please ask before reusing them.
